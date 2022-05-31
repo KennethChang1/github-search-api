@@ -12,6 +12,7 @@
 body {
   font-family: 'Space Mono', monospace;
   width: 90%;
+  max-width: 730px;
   margin: auto;
 }
 
@@ -61,6 +62,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 
 .social {
