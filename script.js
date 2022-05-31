@@ -18,7 +18,6 @@ function fetchApi() {
             }
         })
         .then(data => {
-            console.log(data);
             updateData(data);
         })
 }
