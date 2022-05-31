@@ -18,6 +18,7 @@ function fetchApi() {
             }
         })
         .then(data => {
+            console.log(data);
             updateData(data);
         })
 }
@@ -37,7 +38,7 @@ function updateData(data) {
     let dates = data.created_at.split("-");
     let day = dates[2].split('T');
 
-    username.textContent = data.login;
+    username.textContent = (data.name == null) ? data.login : data.name;
     social.textContent = `@${data.login}`;
     avatar.setAttribute('src', `${data.avatar_url}`);
     date.textContent = `Joined ${day[0]} ${dateArr[Number(dates[1]) - 1]} ${dates[0]}`;
